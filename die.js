@@ -1,16 +1,16 @@
 const numberRotations = [
     [-.03, -.03, 0], // Number 1
-    [-.47,.03,0],
+    [-.53,.03,0],
     [-.03,-.28,0],
     [-.03,.22,0],
     [-.28,0,-.03],
     [.22,0,.03]      // Number 6
 ];
 
-var dieElement = null;
-
 function rollDie(id) {
-    dieElement = document.getElementById(id);
+    document.getElementById('die-instruction').style.visibility = 'hidden';
+
+    let dieElement = document.getElementById(id);
     let randomNumber = Math.floor((Math.random() * 6) + 1);
 
     let transform = getCSSTransform(randomNumber);

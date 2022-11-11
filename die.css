@@ -6,7 +6,7 @@
     position: relative;
     width: 5rem;
     height: 5rem;
-    margin: 250px auto;
+    margin: 250px auto 25px auto;
 
     transition: 5s cubic-bezier(.25,.1,.25,1);
 }
@@ -18,9 +18,11 @@
     width: 5rem;
     height: 5rem;
     position: absolute;
-    border: 1px solid black;
+    border: 1px solid darkblue;
     color: #fafafa;
-    opacity: 80%;
+    opacity: 90%;
+
+    /*box-shadow: 0px 0px 5px black;*/
 }
 .top {
     transform: rotateX(90deg);
@@ -49,6 +51,10 @@
 .front {
     transform: translateZ(calc(0.5 * 5rem));
     background-color: fuchsia;
+}
+
+#die-instruction {
+    margin-bottom: 25px;
 }
 
 /*
