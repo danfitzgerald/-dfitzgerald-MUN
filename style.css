@@ -1,0 +1,88 @@
+:root {
+    --sidebar-width: 15rem;
+    --bio-width: calc(2 * var(--sidebar-width));
+}
+
+body {
+    font-family:'Times New Roman', Times, serif;
+    font-size: 12pt;
+    line-height: 1.3;
+    text-align: center;
+    margin: auto;
+    background-color: #fafafa;
+    /*overflow-x: hidden;*/
+}
+
+div.name {
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.layout {
+	display: flex;
+	flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 1rem auto;
+}
+
+.flex-box {
+    overflow-x: hidden;
+}
+
+div.sidebar {
+	display: block;
+	flex-basis: var(--sidebar-width);
+    /*#f0e0e0*/
+    background: linear-gradient(90deg, #00000010, transparent);
+    box-shadow: 2px 2px 5px darkred;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+div.languages ul {
+    text-align: left;
+    list-style-position: outside;
+    list-style: none;
+}
+
+ul .languages li {
+    display: inline;
+}
+
+ul .anim-bull{
+    background-image: radial-gradient(ellipse 50% 35% at center, red 40%, transparent 65%);
+    display: inline-block;
+    width: 10%;
+    height: 12pt;
+    animation: 1s linear 0s infinite alternate ul-point;
+
+}
+
+@keyframes ul-point {
+    from {
+        rotate: -30deg;
+    }
+    to {
+        rotate: 30deg;
+    }
+}
+
+.bio {
+	display: block;
+	text-align: left;
+	padding-left: 10px;
+	padding-right: 10px;
+    max-width: var(--bio-width);
+}
+
+.bio h3 {
+    font-size: 12pt;
+    margin: 8pt auto;
+    
+}
+
+.github-box {
+    max-width: inherit;
+    overflow-x: auto;
+}
