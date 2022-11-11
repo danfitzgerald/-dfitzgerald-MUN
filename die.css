@@ -7,6 +7,8 @@
     width: 5rem;
     height: 5rem;
     margin: 250px auto;
+
+    transition: 5s cubic-bezier(.25,.1,.25,1);
 }
 
 .face {
@@ -36,15 +38,22 @@
     background-color: red;
 }
 .bottom {
-    transform: rotateX(90deg);
+    transform: rotateX(270deg);
     margin-top: 50%;
     background-color: yellow;
 }
 .back {
-    transform: translateZ(calc(-0.5 * 5rem));
+    transform: translateZ(calc(-0.5 * 5rem)) rotateX(180deg);
     background-color: cyan;
 }
 .front {
     transform: translateZ(calc(0.5 * 5rem));
     background-color: fuchsia;
 }
+
+/*
+#die-element:hover {
+    transform: rotateX(30.78turn) rotateY(30.78turn) rotateZ(5turn) translate(-0%, -0%);
+    transition: 5s cubic-bezier(.25,.1,.25,1);
+}
+*/
