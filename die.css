@@ -1,0 +1,50 @@
+#die-element {
+    transform-style: preserve-3d;
+    transform: rotate3d(1,1,0, -15deg);
+    font-size:25pt;
+    text-align:center;
+    position: relative;
+    width: 5rem;
+    height: 5rem;
+    margin: 250px auto;
+}
+
+.face {
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    width: 5rem;
+    height: 5rem;
+    position: absolute;
+    border: 1px solid black;
+    color: #fafafa;
+    opacity: 80%;
+}
+.top {
+    transform: rotateX(90deg);
+    margin-top: -50%;
+    background-color: blue;
+}
+.right {
+    transform: rotateY(90deg);
+    margin-left: 50%;
+    background-color: green;
+}
+.left {
+    transform: rotateY(-90deg);
+    margin-left: -50%;
+    background-color: red;
+}
+.bottom {
+    transform: rotateX(90deg);
+    margin-top: 50%;
+    background-color: yellow;
+}
+.back {
+    transform: translateZ(calc(-0.5 * 5rem));
+    background-color: cyan;
+}
+.front {
+    transform: translateZ(calc(0.5 * 5rem));
+    background-color: fuchsia;
+}
