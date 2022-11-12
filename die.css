@@ -1,12 +1,21 @@
+:root {
+    --die-size: 5rem;
+}
+
+.die-outer {
+    display:block;
+    margin-top: calc(0.5 * var(--die-size));
+}
+
 #die-element {
     transform-style: preserve-3d;
     transform: rotate3d(1,1,0, -15deg);
     font-size:25pt;
     text-align:center;
     position: relative;
-    width: 5rem;
-    height: 5rem;
-    margin: 250px auto 25px auto;
+    width: var(--die-size);
+    height: var(--die-size);
+    margin: calc(.25 * var(--die-size)) auto calc( .25 * var(--die-size)) auto;
 
     transition: 5s cubic-bezier(.25,.1,.25,1);
 }
@@ -15,14 +24,12 @@
     display:flex;
     justify-content: center;
     align-items:center;
-    width: 5rem;
-    height: 5rem;
+    width: var(--die-size);
+    height: var(--die-size);
     position: absolute;
     border: 1px solid darkblue;
     color: #fafafa;
     opacity: 90%;
-
-    /*box-shadow: 0px 0px 5px black;*/
 }
 .top {
     transform: rotateX(90deg);
@@ -45,21 +52,14 @@
     background-color: yellow;
 }
 .back {
-    transform: translateZ(calc(-0.5 * 5rem)) rotateX(180deg);
+    transform: translateZ(calc(-0.5 * var(--die-size))) rotateX(180deg);
     background-color: cyan;
 }
 .front {
-    transform: translateZ(calc(0.5 * 5rem));
+    transform: translateZ(calc(0.5 * var(--die-size)));
     background-color: fuchsia;
 }
 
 #die-instruction {
     margin-bottom: 25px;
 }
-
-/*
-#die-element:hover {
-    transform: rotateX(30.78turn) rotateY(30.78turn) rotateZ(5turn) translate(-0%, -0%);
-    transition: 5s cubic-bezier(.25,.1,.25,1);
-}
-*/
