@@ -22,14 +22,13 @@ function rollDie(id) {
 }
 
 function getCSSTransform(randNum) {
-    // Calculate random number of turns the die will roll.
-    let xTurns = Math.floor(Math.random() * 11);
-    let yTurns = Math.floor(Math.random() * 11);
-    let zTurns = Math.floor(Math.random() * 11);
+    let maxRandTurns = 6;
+    let turns = [0,0,0];
 
-    xTurns += numberRotations[randNum-1][0];
-    yTurns += numberRotations[randNum-1][1];
-    zTurns += numberRotations[randNum-1][2];
+    for(let i = 0; i < turns.length; i++) {
+        turns[i] = Math.floor(Math.random() * maxRandTurns+1) - (maxRandTurns)/2;
+        turns[i] += numberRotations[randNum-1][i];
+    }
 
-    return "rotateX("+xTurns+"turn) rotateY("+yTurns+"turn) rotateZ("+zTurns+"turn)";
+    return "rotateX("+turns[0]+"turn) rotateY("+turns[1]+"turn) rotateZ("+turns[2]+"turn)";
 }
